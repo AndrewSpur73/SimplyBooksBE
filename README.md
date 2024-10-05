@@ -28,6 +28,9 @@
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [.NET](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
+<h3>Postman Documentation</h3>
+- [API Documentation](https://documenter.getpostman.com/view/31982709/2sAXxMfteM)
+
 <h3>Cloning</h3>
 
 How to clone your project
@@ -52,7 +55,6 @@ dotnet watch run
 | <kbd>POST /authors</kbd>     | create a new author [request details](#post-author)
 | <kbd>PUT /authors/{id}</kbd>     | update an author [request details](#put-author)
 | <kbd>DELETE /authors/{id}</kbd>     | delete an author [request details](#delete-author)
-
 | <kbd>GET /books</kbd>     | retrieves books [response details](#get-book)
 | <kbd>GET /books/{id}</kbd>     | retrieves individual book by Id [response details](#get-bookid)
 | <kbd>POST /books</kbd>     | create a new book [request details](#post-book)
@@ -337,5 +339,3 @@ dotnet watch run
 **RESPONSE**
 - No content
 
-<h2>Postman Documentation</h2>
-- [API Documentation](https://documenter.getpostman.com/view/31982709/2sAXxMfteM)
