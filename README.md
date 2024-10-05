@@ -14,10 +14,14 @@
 
 - C#
 - .NET
+- SQL
+- Postman
 
 <h2 id="started">🚀 Getting started</h2>
 
-Here you describe how to run your project locally
+1.) Clone a repository option in Visual Studio
+2.) Enter or type the repository location, and then select the Clone button
+3.) To start building the program, press the green Start button on the Visual Studio toolbar, or press F5 or Ctrl+F5. Using the Start button or F5 runs the program under the debugger.
 
 <h3>Prerequisites</h3>
 
@@ -29,61 +33,309 @@ Here you describe how to run your project locally
 How to clone your project
 
 ```bash
-git clone your-project-url-in-github
-```
-
-<h3>Config .env variables</h2>
-
-Use the `.env.example` as reference to create your configuration file `.env` with your AWS Credentials
-
-```yaml
-NODE_AWS_REGION=us-east-1
-NODE_AWS_KEY_ID={YOUR_AWS_KEY_ID}
-NODE_AWS_SECRET={YOUR_AWS_SECRET}
+git clone git@github.com:AndrewSpur73/SimplyBooksBE.git
 ```
 
 <h3>Starting</h3>
 
-How to start your project
-
 ```bash
-cd project-name
-npm some-command-to-run
+cd SimplyBooksBE
+dotnet watch run
 ```
 
 <h2 id="routes">📍 API Endpoints</h2>
-
-Here you can list the main routes of your API, and what are their expected request bodies.
 ​
 | route               | description                                          
 |----------------------|-----------------------------------------------------
-| <kbd>GET /authenticate</kbd>     | retrieves user info see [response details](#get-auth-detail)
-| <kbd>POST /authenticate</kbd>     | authenticate user into the api see [request details](#post-auth-detail)
+| <kbd>GET /authors</kbd>     | retrieves authors [response details](#get-author)
+| <kbd>GET /authors/{id}</kbd>     | retrieves individual author by Id [response details](#get-authorid)
+| <kbd>POST /authors</kbd>     | create a new author [request details](#post-author)
+| <kbd>PUT /authors/{id}</kbd>     | update an author [request details](#put-author)
+| <kbd>DELETE /authors/{id}</kbd>     | delete an author [request details](#delete-author)
 
-<h3 id="get-auth-detail">GET /authenticate</h3>
+| <kbd>GET /books</kbd>     | retrieves books [response details](#get-book)
+| <kbd>GET /books/{id}</kbd>     | retrieves individual book by Id [response details](#get-bookid)
+| <kbd>POST /books</kbd>     | create a new book [request details](#post-book)
+| <kbd>PUT /books/{id}</kbd>     | update a book [request details](#put-book)
+| <kbd>DELETE /books/{id}</kbd>     | delete a book [request details](#delete-book)
+
+<h3 id="get-author">GET /authors</h3>
+
+**RESPONSE**
+```json
+    {
+        "id": 1,
+        "firstName": "Emily",
+        "lastName": "Turner",
+        "email": "emily.turner@example.com",
+        "image": "https://example.com/images/emily.jpg",
+        "favorite": false,
+        "uid": "a1b2c3d4e5f6",
+        "books": null
+    },
+    {
+        "id": 2,
+        "firstName": "Michael",
+        "lastName": "Smith",
+        "email": "michael.smith@example.com",
+        "image": "https://example.com/images/michael.jpg",
+        "favorite": true,
+        "uid": "b7c8d9e0f1g2",
+        "books": null
+    },
+    {
+        "id": 3,
+        "firstName": "Olivia",
+        "lastName": "Johnson",
+        "email": "olivia.johnson@example.com",
+        "image": "https://example.com/images/olivia.jpg",
+        "favorite": false,
+        "uid": "h3i4j5k6l7m8",
+        "books": null
+    },
+    {
+        "id": 4,
+        "firstName": "James",
+        "lastName": "Williams",
+        "email": "james.williams@example.com",
+        "image": "https://example.com/images/james.jpg",
+        "favorite": true,
+        "uid": "n9o0p1q2r3s4",
+        "books": null
+    }
+```
+
+<h3 id="get-authorid">GET /authors/id</h3>
 
 **RESPONSE**
 ```json
 {
-  "name": "Fernanda Kipper",
-  "age": 20,
-  "email": "her-email@gmail.com"
+    "id": 1,
+    "firstName": "Emily",
+    "lastName": "Turner",
+    "email": "emily.turner@example.com",
+    "image": "https://example.com/images/emily.jpg",
+    "favorite": false,
+    "uid": "a1b2c3d4e5f6",
+    "books": [
+        {
+            "id": 1,
+            "title": "Introduction to C#",
+            "image": "https://example.com/images/csharp.jpg",
+            "price": 29.99,
+            "sale": false,
+            "description": "A comprehensive guide to C# programming.",
+            "authorId": 1,
+            "uid": "book12345",
+            "author": null
+        }
+    ]
 }
 ```
+<h3 id="post-author">POST /authors</h3>
 
-<h3 id="post-auth-detail">POST /authenticate</h3>
+**REQUEST**
+```json
+   { 
+    "firstName": "Bob",
+    "lastName": "Ross",
+    "email": "bob.ross@example.com",
+    "image": "https://example.com/images/bob.jpg",
+    "favorite": true
+   }
+```
+
+**RESPONSE**
+```json
+  {
+    "id": 5,
+    "firstName": "Bob",
+    "lastName": "Ross",
+    "email": "bob.ross@example.com",
+    "image": "https://example.com/images/bob.jpg",
+    "favorite": true,
+    "uid": null,
+    "books": null
+  }
+```
+
+<h3 id="put-author">PUT /authors/id</h3>
 
 **REQUEST**
 ```json
 {
-  "username": "fernandakipper",
-  "password": "4444444"
+    "id": 5,
+    "firstName": "Bobby",
+    "lastName": "Rossy",
+    "email": "bob.ross@example.com",
+    "image": "https://example.com/images/bob.jpg",
+    "favorite": true,
+    "uid": null,
+    "books": null
 }
 ```
 
 **RESPONSE**
 ```json
 {
-  "token": "OwoMRHsaQwyAgVoc3OXmL1JhMVUYXGGBbCTK0GBgiYitwQwjf0gVoBmkbuyy0pSi"
+    "id": 5,
+    "firstName": "Bobby",
+    "lastName": "Rossy",
+    "email": "bob.ross@example.com",
+    "image": "https://example.com/images/bob.jpg",
+    "favorite": true,
+    "uid": null,
+    "books": null
 }
 ```
+
+<h3 id="get-authorid">DELETE /authors/id</h3>
+
+**RESPONSE**
+- No content
+
+<h3 id="get-book">GET /books</h3>
+
+**RESPONSE**
+```json
+    {
+        "id": 1,
+        "title": "Introduction to C#",
+        "image": "https://example.com/images/csharp.jpg",
+        "price": 29.99,
+        "sale": false,
+        "description": "A comprehensive guide to C# programming.",
+        "authorId": 1,
+        "uid": "book12345",
+        "author": null
+    },
+    {
+        "id": 2,
+        "title": "Mastering ASP.NET",
+        "image": "https://example.com/images/aspnet.jpg",
+        "price": 39.99,
+        "sale": true,
+        "description": "Advanced concepts in ASP.NET Core development.",
+        "authorId": 2,
+        "uid": "book67890",
+        "author": null
+    },
+    {
+        "id": 3,
+        "title": "JavaScript Essentials",
+        "image": "https://example.com/images/javascript.jpg",
+        "price": 24.99,
+        "sale": true,
+        "description": "Learn the basics of JavaScript from scratch.",
+        "authorId": 3,
+        "uid": "book24680",
+        "author": null
+    },
+    {
+        "id": 4,
+        "title": "React for Beginners",
+        "image": "https://example.com/images/react.jpg",
+        "price": 19.99,
+        "sale": false,
+        "description": "An introduction to building web apps with React.",
+        "authorId": 4,
+        "uid": "book11223",
+        "author": null
+    }
+```
+
+<h3 id="get-bookid">GET /books/id</h3>
+
+**RESPONSE**
+```json
+{
+    "id": 1,
+    "title": "Introduction to C#",
+    "image": "https://example.com/images/csharp.jpg",
+    "price": 29.99,
+    "sale": false,
+    "description": "A comprehensive guide to C# programming.",
+    "authorId": 1,
+    "uid": "book12345",
+    "author": {
+        "id": 1,
+        "firstName": "Emily",
+        "lastName": "Turner",
+        "email": "emily.turner@example.com",
+        "image": "https://example.com/images/emily.jpg",
+        "favorite": false,
+        "uid": "a1b2c3d4e5f6",
+        "books": [
+            null
+        ]
+    }
+}
+```
+<h3 id="post-book">POST /books</h3>
+
+**REQUEST**
+```json
+   { 
+    "title": "Introduction to Coding",
+    "image": "https://example.com/images/coding.jpg",
+    "price": 99.99,
+    "sale": true,
+    "description": "A comprehensive guide to coding programming.",
+    "authorId": 1
+   }
+```
+
+**RESPONSE**
+```json
+{
+    "id": 5,
+    "title": "Introduction to Coding",
+    "image": "https://example.com/images/coding.jpg",
+    "price": 99.99,
+    "sale": true,
+    "description": "A comprehensive guide to coding programming.",
+    "authorId": 1,
+    "uid": null,
+    "author": null
+}
+```
+
+<h3 id="put-book">PUT /books/id</h3>
+
+**REQUEST**
+```json
+{
+    "id": 5,
+    "title": "Introduction to Coding",
+    "image": "https://example.com/images/coding.jpg",
+    "price": 109.99,
+    "sale": true,
+    "description": "A comprehensive guide to coding programming.",
+    "authorId": 1,
+    "uid": null,
+    "author": null
+}
+```
+
+**RESPONSE**
+```json
+{
+    "id": 5,
+    "title": "Introduction to Coding",
+    "image": "https://example.com/images/coding.jpg",
+    "price": 109.99,
+    "sale": true,
+    "description": "A comprehensive guide to coding programming.",
+    "authorId": 1,
+    "uid": null,
+    "author": null
+}
+```
+
+<h3 id="get-bookid">DELETE /books/id</h3>
+
+**RESPONSE**
+- No content
+
+<h2>Postman Documentation</h2>
+- [API Documentation](https://documenter.getpostman.com/view/31982709/2sAXxMfteM)
