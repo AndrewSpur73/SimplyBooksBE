@@ -23,8 +23,8 @@ Here you describe how to run your project locally
 
 Here you list all prerequisites necessary for running your project. For example:
 
-- [NodeJS](https://github.com/)
-- [Git 2](https://github.com)
+- [Visual Studio]([https://github.com/](https://visualstudio.microsoft.com/))
+- [.NET]([https://github.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
 
 <h3>Cloning</h3>
 
