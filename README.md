@@ -4,20 +4,16 @@
  <a href="#tech">Technologies</a> • 
  <a href="#started">Getting Started</a> • 
   <a href="#routes">API Endpoints</a> •
- <a href="#colab">Collaborators</a> •
- <a href="#contribute">Contribute</a>
 </p>
 
 <p align="center">
-    <b>Simple description of what your project do or how to use it.</b>
+    <b>The SimplyBooks API provides endpoints for managing authors and their books. This collection allows users to retrieve, create, update, and delete both books and authors. It is designed to facilitate interactions with a collection of books and their respective authors in an organized and user-friendly way.</b>
 </p>
 
 <h2 id="technologies">💻 Technologies</h2>
 
-- list of all technologies you used
-- Java
-- MongoDB
-- NodeJS
+- C#
+- .NET
 
 <h2 id="started">🚀 Getting started</h2>
 
