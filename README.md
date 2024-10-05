@@ -23,8 +23,8 @@ Here you describe how to run your project locally
 
 Here you list all prerequisites necessary for running your project. For example:
 
-- [Visual Studio]([https://github.com/](https://visualstudio.microsoft.com/))
-- [.NET]([https://github.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
+- [Visual Studio]([https://visualstudio.microsoft.com/])
+- [.NET]([https://dotnet.microsoft.com/en-us/download/dotnet/8.0])
 
 <h3>Cloning</h3>
 
