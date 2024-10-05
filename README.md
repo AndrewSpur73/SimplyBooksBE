@@ -45,21 +45,22 @@ git clone git@github.com:AndrewSpur73/SimplyBooksBE.git
 cd SimplyBooksBE
 dotnet watch run
 ```
-
-<h2 id="routes">📍 API Endpoints</h2>
 ​
-| route               | description                                          
-|----------------------|-----------------------------------------------------
-| <kbd>GET /authors</kbd>     | retrieves authors [response details](#get-author)
-| <kbd>GET /authors/{id}</kbd>     | retrieves individual author by Id [response details](#get-authorid)
-| <kbd>POST /authors</kbd>     | create a new author [request details](#post-author)
-| <kbd>PUT /authors/{id}</kbd>     | update an author [request details](#put-author)
-| <kbd>DELETE /authors/{id}</kbd>     | delete an author [request details](#delete-author)
-| <kbd>GET /books</kbd>     | retrieves books [response details](#get-book)
-| <kbd>GET /books/{id}</kbd>     | retrieves individual book by Id [response details](#get-bookid)
-| <kbd>POST /books</kbd>     | create a new book [request details](#post-book)
-| <kbd>PUT /books/{id}</kbd>     | update a book [request details](#put-book)
-| <kbd>DELETE /books/{id}</kbd>     | delete a book [request details](#delete-book)
+<h2 id="routes">📍 API Endpoints</h2>
+
+| Route                        | Description                                                         |
+|-------------------------------|---------------------------------------------------------------------|
+| <kbd>GET /authors</kbd>        | Retrieves authors [response details](#get-author)                   |
+| <kbd>GET /authors/{id}</kbd>   | Retrieves individual author by ID [response details](#get-authorid) |
+| <kbd>POST /authors</kbd>       | Create a new author [request details](#post-author)                 |
+| <kbd>PUT /authors/{id}</kbd>   | Update an author [request details](#put-author)                     |
+| <kbd>DELETE /authors/{id}</kbd>| Delete an author [request details](#delete-author)                 |
+| <kbd>GET /books</kbd>          | Retrieves books [response details](#get-book)                       |
+| <kbd>GET /books/{id}</kbd>     | Retrieves individual book by ID [response details](#get-bookid)     |
+| <kbd>POST /books</kbd>         | Create a new book [request details](#post-book)                     |
+| <kbd>PUT /books/{id}</kbd>     | Update a book [request details](#put-book)                         |
+| <kbd>DELETE /books/{id}</kbd>  | Delete a book [request details](#delete-book)                      |
+
 
 <h3 id="get-author">GET /authors</h3>
 
