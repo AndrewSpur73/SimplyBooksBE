@@ -57,10 +57,10 @@ namespace SimplyBooksBE.Migrations
                 columns: new[] { "Id", "Email", "Favorite", "FirstName", "Image", "LastName", "Uid" },
                 values: new object[,]
                 {
-                    { 1, "emily.turner@example.com", false, "Emily", "https://example.com/images/emily.jpg", "Turner", "a1b2c3d4e5f6" },
-                    { 2, "michael.smith@example.com", true, "Michael", "https://example.com/images/michael.jpg", "Smith", "b7c8d9e0f1g2" },
-                    { 3, "olivia.johnson@example.com", false, "Olivia", "https://example.com/images/olivia.jpg", "Johnson", "h3i4j5k6l7m8" },
-                    { 4, "james.williams@example.com", true, "James", "https://example.com/images/james.jpg", "Williams", "n9o0p1q2r3s4" }
+                    { 1, "emily.turner@example.com", false, "Emily", "https://example.com/images/emily.jpg", "Turner", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 2, "michael.smith@example.com", true, "Michael", "https://example.com/images/michael.jpg", "Smith", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 3, "olivia.johnson@example.com", false, "Olivia", "https://example.com/images/olivia.jpg", "Johnson", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 4, "james.williams@example.com", true, "James", "https://example.com/images/james.jpg", "Williams", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" }
                 });
 
             migrationBuilder.InsertData(
@@ -68,10 +68,10 @@ namespace SimplyBooksBE.Migrations
                 columns: new[] { "Id", "AuthorId", "Description", "Image", "Price", "Sale", "Title", "Uid" },
                 values: new object[,]
                 {
-                    { 1, 1, "A comprehensive guide to C# programming.", "https://example.com/images/csharp.jpg", 29.99m, false, "Introduction to C#", "book12345" },
-                    { 2, 2, "Advanced concepts in ASP.NET Core development.", "https://example.com/images/aspnet.jpg", 39.99m, true, "Mastering ASP.NET", "book67890" },
-                    { 3, 3, "Learn the basics of JavaScript from scratch.", "https://example.com/images/javascript.jpg", 24.99m, true, "JavaScript Essentials", "book24680" },
-                    { 4, 4, "An introduction to building web apps with React.", "https://example.com/images/react.jpg", 19.99m, false, "React for Beginners", "book11223" }
+                    { 1, 1, "A comprehensive guide to C# programming.", "https://example.com/images/csharp.jpg", 29.99m, false, "Introduction to C#", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 2, 2, "Advanced concepts in ASP.NET Core development.", "https://example.com/images/aspnet.jpg", 39.99m, true, "Mastering ASP.NET", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 3, 3, "Learn the basics of JavaScript from scratch.", "https://example.com/images/javascript.jpg", 24.99m, true, "JavaScript Essentials", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" },
+                    { 4, 4, "An introduction to building web apps with React.", "https://example.com/images/react.jpg", 19.99m, false, "React for Beginners", "3HLd4GH2OrYYJ1eAUWEqFcixcK02" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -12,7 +12,7 @@ using SimplyBooksBE;
 namespace SimplyBooksBE.Migrations
 {
     [DbContext(typeof(SimplyBooksBEDbContext))]
-    [Migration("20241003013312_InitialCreate")]
+    [Migration("20241008024056_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,7 +63,7 @@ namespace SimplyBooksBE.Migrations
                             FirstName = "Emily",
                             Image = "https://example.com/images/emily.jpg",
                             LastName = "Turner",
-                            Uid = "a1b2c3d4e5f6"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -73,7 +73,7 @@ namespace SimplyBooksBE.Migrations
                             FirstName = "Michael",
                             Image = "https://example.com/images/michael.jpg",
                             LastName = "Smith",
-                            Uid = "b7c8d9e0f1g2"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -83,7 +83,7 @@ namespace SimplyBooksBE.Migrations
                             FirstName = "Olivia",
                             Image = "https://example.com/images/olivia.jpg",
                             LastName = "Johnson",
-                            Uid = "h3i4j5k6l7m8"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -93,7 +93,7 @@ namespace SimplyBooksBE.Migrations
                             FirstName = "James",
                             Image = "https://example.com/images/james.jpg",
                             LastName = "Williams",
-                            Uid = "n9o0p1q2r3s4"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         });
                 });
 
@@ -142,7 +142,7 @@ namespace SimplyBooksBE.Migrations
                             Price = 29.99m,
                             Sale = false,
                             Title = "Introduction to C#",
-                            Uid = "book12345"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -153,7 +153,7 @@ namespace SimplyBooksBE.Migrations
                             Price = 39.99m,
                             Sale = true,
                             Title = "Mastering ASP.NET",
-                            Uid = "book67890"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -164,7 +164,7 @@ namespace SimplyBooksBE.Migrations
                             Price = 24.99m,
                             Sale = true,
                             Title = "JavaScript Essentials",
-                            Uid = "book24680"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         },
                         new
                         {
@@ -175,7 +175,7 @@ namespace SimplyBooksBE.Migrations
                             Price = 19.99m,
                             Sale = false,
                             Title = "React for Beginners",
-                            Uid = "book11223"
+                            Uid = "3HLd4GH2OrYYJ1eAUWEqFcixcK02"
                         });
                 });
 
